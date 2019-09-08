@@ -17,5 +17,14 @@
     "@accursoft/jquery-caret": "^1.3.7",
     "debug": "^4.1.1",
     "jquery": "^3.4.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkg20001/acomp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkg20001/acomp/issues"
+  },
+  "homepage": "https://github.com/mkg20001/acomp#readme"
 }
