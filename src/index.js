@@ -6,6 +6,7 @@ module.exports = {
     TextFieldJquery: require('./inputController/textFieldJquery')
   },
   inputModel: {
-    TimeSimple12And24: require('./inputModel/timeSimple12And24')
+    TimeSimple12And24: require('./inputModel/timeSimple12And24'),
+    DateDDMMYYYY: require('./inputModel/dateDDMMYYYY')
   }
 }
