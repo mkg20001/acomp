@@ -45,7 +45,7 @@ module.exports = (id) => ({onChange}) => {
     e.preventDefault()
 
     if (e.which) {
-      const {_val, _pos} = onChange(val, pos, [String.fromCharCode(e.originalEvent.charCode)])
+      const {val: _val, pos: _pos} = onChange(val, pos, [String.fromCharCode(e.originalEvent.charCode)])
 
       $(id).val(_val.join(''))
       $(id).caret(_pos)
