@@ -45,10 +45,10 @@ module.exports = (id) => ({onChange}) => {
     e.preventDefault()
 
     if (e.which) {
-      const {val: _val, pos: _pos} = onChange(val, pos, [String.fromCharCode(e.originalEvent.charCode)])
+      const res = onChange(val, pos, [String.fromCharCode(e.originalEvent.charCode)])
 
-      $(id).val(_val.join(''))
-      $(id).caret(_pos)
+      $(id).val(res.val.join(''))
+      $(id).caret(res.pos)
     }
   })
 }
