@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = (val, pos, lastKey, key) => { // eslint-disable-line complexity
+module.exports = () => (val, pos, lastKey, key) => { // eslint-disable-line complexity
   /* Time */
 
   // rule of thumb: push to stack if the field is after the current

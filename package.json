@@ -12,5 +12,10 @@
     "validation"
   ],
   "author": "Maciej Krüger <mkg20001@gmail.com>",
-  "license": "MPL-2.0"
+  "license": "MPL-2.0",
+  "dependencies": {
+    "@accursoft/jquery-caret": "^1.3.7",
+    "debug": "^4.1.1",
+    "jquery": "^3.4.1"
+  }
 }
