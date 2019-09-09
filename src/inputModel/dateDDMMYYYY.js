@@ -20,6 +20,8 @@ module.exports = ({currentCentury}) => (val, pos, lastKey, key) => { // eslint-d
     case 1: { // first digit of day of month. any number
       if (key.match(/^[0-9]$/)) {
         return {curChar: key, pushStack: '.'}
+      } else if (key === '.') {
+        return {prevChar: '0', curChar: lastKey, pushStack: key}
       } else {
         return false
       }
@@ -41,14 +43,16 @@ module.exports = ({currentCentury}) => (val, pos, lastKey, key) => { // eslint-d
     // 12.05
     case 4: { // first digit of month. any number
       if (key.match(/^[0-9]$/)) {
-        return {curChar: key, pushStack: currentCentury ? '.20' : '.'} // if currentCentury is enabled, then autofill that
+        return {curChar: key, pushStack: '.'} // if currentCentury is enabled, then autofill that
+      } else if (key === '.') {
+        return {prevChar: '0', curChar: lastKey, pushStack: key}
       } else {
         return false
       }
     }
     // 12.05.
     case 5: {
-      return key === '.' ? {curChar: key} : false
+      return key === '.' ? {curChar: key, pushStack: currentCentury ? '20' : ''} : false
     }
     case 6: { // assume 4 digit year, maximum 2999
       if (key.match(/^[0-2]$/)) {
